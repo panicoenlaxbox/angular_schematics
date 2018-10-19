@@ -1,2 +1,3 @@
 import { Rule } from "@angular-devkit/schematics";
-export declare function myFirstSchema(_options: any): Rule;
+import { Schema as MyFirstSchemaOptions } from './schema';
+export declare function myFirstSchema(_options: MyFirstSchemaOptions): Rule;

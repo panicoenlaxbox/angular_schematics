@@ -9,6 +9,7 @@ import { buildRelativePath, findModuleFromOptions } from '../utility/find-module
 import { addDeclarationToModule, addExportToModule } from '../utility/ast-utils';
 
 import * as ts from 'typescript';
+import { Schema as MyFirstSchemaOptions } from './schema';
 
 function addDeclarationToNgModule(options: any): Rule {
   return (host: Tree) => {
@@ -69,7 +70,7 @@ function addDeclarationToNgModule(options: any): Rule {
 }
 
 // ng g my-first-schema:my-first-schema --name carmen --dry-run --module App --project app1
-export function myFirstSchema(_options: any): Rule {
+export function myFirstSchema(_options: MyFirstSchemaOptions): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     _context.logger.info(JSON.stringify(_options));
 
